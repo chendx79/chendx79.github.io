@@ -1,3 +1,11 @@
+---
+layout: wiki
+title: Elasticsearch维护命令
+categories: [Elasticsearch]
+description: 日常维护指令记录
+keywords: 运维
+---
+
 ###服务启动
 ```
 sudo su sre
