@@ -1,19 +1,19 @@
 ---
 layout: wiki
 title: Elasticsearch维护命令
-categories: [Elasticsearch]
+categories: Elasticsearch
 description: 日常维护指令记录
-keywords: 运维
+keywords: Elasticsearch
 ---
 
-###服务启动
+### 服务启动
 ```
 sudo su sre
 cd /var/wd/elasticsearch
 ./startup.sh
 ```
 
-###服务关闭
+### 服务关闭
 ```
 sudo su sre
 cd /var/wd/elasticsearch
@@ -21,7 +21,7 @@ cd /var/wd/elasticsearch
 ```
  
 
-###健康检查
+### 健康检查
 ```
 curl 'localhost:9200/_cat/health?v'
 curl 'localhost:9200/_cat/nodes?v'
@@ -31,7 +31,7 @@ curl 'localhost:9200/_cat/indices?v'
 注：IP和端口根据实际情况修改
  
 
-###内存调整
+### 内存调整
 修改startup.sh
 ```
 #!/bin/bash
