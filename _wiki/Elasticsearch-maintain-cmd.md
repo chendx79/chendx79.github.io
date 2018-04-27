@@ -12,6 +12,7 @@ sudo su sre
 cd /var/wd/elasticsearch
 ./startup.sh
 ```
+特别注意：不能用前端方式启动，使用前端方式启动的进程将在ssh进程中断时关闭。
 
 ### 服务关闭
 ```
@@ -39,3 +40,5 @@ curl 'localhost:9200/_cat/indices?v'
 ```
 修改ms和mx为最小和最大内存使用量
 
+### 故障恢复
+当集群出现故障需要重启时，关闭所有服务器，先启动集群中主节点，主节点配置在discovery.zen.ping.unicast.hosts中。
